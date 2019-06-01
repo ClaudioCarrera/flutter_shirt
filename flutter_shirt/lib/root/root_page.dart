@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shirt/homePage/home_page.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RootPage extends StatefulWidget {
   @override
@@ -7,38 +9,21 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
-  GoogleSignIn _googleSignIn = new GoogleSignIn(
-    scopes: [
-      'email',
-      'https://www.googleapis.com/auth/contacts.readonly',
-    ],
-  );
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  @override
-  void initState() {
-    initLogin();
-  }
+  Future<FirebaseUser> _handleSignIn() async {
+    final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
+    final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
 
-  initLogin() {
-    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount account) async {
-      if (account != null) {
-        print('logged');
-      } else {
-        print('not logged');
-      }
-    });
-    _googleSignIn.signInSilently().whenComplete(() {
-      print('ok');
-    });
-  }
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
 
-  doLogin() async {
-    showLoading();
-    await _googleSignIn.signIn();
-  }
-
-  Widget showLoading() {
-    return CircularProgressIndicator();
+    final FirebaseUser user = await _auth.signInWithCredential(credential);
+    print("signed in " + user.displayName);
+    return user;
   }
 
   @override
@@ -50,8 +35,17 @@ class _RootPageState extends State<RootPage> {
           Container(
             child: RaisedButton(
               child: const Text('LOGIN'),
-              onPressed: () {
-                doLogin();
+              onPressed: () async {
+                FirebaseUser user = await _handleSignIn();
+                if (user.email != null) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      fullscreenDialog: true,
+                      builder: (context) => HomePage(),
+                    ),
+                  );
+                }
               },
             ),
             padding: const EdgeInsets.all(16),

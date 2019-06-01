@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>536048154155-0efn25dprs518jmt7g556s5jge2a2got.apps.googleusercontent.com</string>
+	<string>640743762973-naohu2q7q356lpgk3j798ltuiqc09goc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.536048154155-0efn25dprs518jmt7g556s5jge2a2got</string>
+	<string>com.googleusercontent.apps.640743762973-naohu2q7q356lpgk3j798ltuiqc09goc</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAfOW1Bml48cXPAnMvMf7yLZQYNuJqx_fE</string>
+	<string>AIzaSyDNxIe3RM_pgV3cJH2Mas1qVoWbDBUbAwY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>536048154155</string>
+	<string>640743762973</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.flutterShirt</string>
 	<key>PROJECT_ID</key>
-	<string>fluttershirt</string>
+	<string>fluttershirt-93829</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fluttershirt.appspot.com</string>
+	<string>fluttershirt-93829.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:536048154155:ios:9807d66452de394a</string>
+	<string>1:640743762973:ios:9807d66452de394a</string>
 	<key>DATABASE_URL</key>
-	<string>https://fluttershirt.firebaseio.com</string>
+	<string>https://fluttershirt-93829.firebaseio.com</string>
 </dict>
 </plist>
