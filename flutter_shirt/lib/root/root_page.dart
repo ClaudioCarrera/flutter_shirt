@@ -46,9 +46,7 @@ class _RootPageState extends State<RootPage> {
             child: RaisedButton(
               child: const Text('LOGIN'),
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute<void>(builder: (_) => doLogin()),
-                );
+                doLogin();
               },
             ),
             padding: const EdgeInsets.all(16),
