@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RootPage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Container(),
+        child: RootPage(),
       ),
     );
   }
