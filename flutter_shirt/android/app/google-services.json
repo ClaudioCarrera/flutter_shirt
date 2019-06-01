@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "536048154155",
+    "firebase_url": "https://fluttershirt.firebaseio.com",
+    "project_id": "fluttershirt",
+    "storage_bucket": "fluttershirt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536048154155:android:7c6774278db0f927",
+        "android_client_info": {
+          "package_name": "com.example.flutter_shirt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536048154155-e0t21q12l3nulkq5t99n2v0u55701im6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDmf2D6qaC26lylPKhCF-R7YjojW-L6i4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536048154155-e0t21q12l3nulkq5t99n2v0u55701im6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
