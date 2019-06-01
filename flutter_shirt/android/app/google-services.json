@@ -1,35 +1,50 @@
 {
   "project_info": {
-    "project_number": "536048154155",
-    "firebase_url": "https://fluttershirt.firebaseio.com",
-    "project_id": "fluttershirt",
-    "storage_bucket": "fluttershirt.appspot.com"
+    "project_number": "640743762973",
+    "firebase_url": "https://fluttershirt-93829.firebaseio.com",
+    "project_id": "fluttershirt-93829",
+    "storage_bucket": "fluttershirt-93829.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:536048154155:android:7c6774278db0f927",
+        "mobilesdk_app_id": "1:640743762973:android:7c6774278db0f927",
         "android_client_info": {
           "package_name": "com.example.flutter_shirt"
         }
       },
       "oauth_client": [
         {
-          "client_id": "536048154155-e0t21q12l3nulkq5t99n2v0u55701im6.apps.googleusercontent.com",
+          "client_id": "640743762973-taic69ldctn12m9fk7qn8pr6rdpl5n3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_shirt",
+            "certificate_hash": "62f19aac737661c277349c46d61b68b229f52207"
+          }
+        },
+        {
+          "client_id": "640743762973-cig7l8slcktv2kn8qui4vctdim7l2s2i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCDmf2D6qaC26lylPKhCF-R7YjojW-L6i4"
+          "current_key": "AIzaSyCxDW0rvZENFwz_ogbhjtzT-LpK1uiI9cU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "536048154155-e0t21q12l3nulkq5t99n2v0u55701im6.apps.googleusercontent.com",
+              "client_id": "640743762973-cig7l8slcktv2kn8qui4vctdim7l2s2i.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "640743762973-naohu2q7q356lpgk3j798ltuiqc09goc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterShirt"
+              }
             }
           ]
         }
