@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shirt/login/login_page.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class RootPage extends StatefulWidget {
   @override
@@ -7,6 +7,34 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
+  GoogleSignIn _googleSignIn = new GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
+
+  initLogin() {
+    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount account) async {
+      if (account != null) {
+        print('logged');
+      } else {
+        print('not logged');
+      }
+    });
+    _googleSignIn.signInSilently().whenComplete(() {
+      print('ok');
+    });
+  }
+
+  doLogin() async {
+    showLoading();
+    await _googleSignIn.signIn();
+  }
+
+  Widget showLoading() {
+    return CircularProgressIndicator();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +47,7 @@ class _RootPageState extends State<RootPage> {
               child: const Text('LOGIN'),
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute<void>(builder: (_) => LoginPage()),
+                  MaterialPageRoute<void>(builder: (_) => doLogin()),
                 );
               },
             ),
