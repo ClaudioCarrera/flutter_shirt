@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_shirt/main.dart';
-import 'package:flutter_shirt/root/root_page.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:camera/camera.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,16 +14,11 @@ class _HomePageState extends State<HomePage> {
 
   void _signOut() {
     _auth.signOut().then((_) {
-      googleUser.signOut();
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          fullscreenDialog: true,
-          builder: (context) => MyHomePage(),
-        ),
-      );
+//      googleUser.signOut();
+      Navigator.of(context).pop();
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,11 +37,18 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Center(
             child: Text('ciao'),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+
+        },
+        child: Icon(Icons.camera_alt),
       ),
     );
   }
